@@ -22,7 +22,7 @@ jobs:
         id: repo
         run: |
           REPO="https://github.com/cmus/cmus.git"
-          REG="^cmus (\d+\.\d+\.\d+).*$"
+          REG="^v?(\d+\.\d+\.\d+)$"
           VERSION=$(git ls-remote --tags --sort="-version:refname" $REPO | grep -v '{}$' | awk -F '/' '{print $3}' | grep -P $REG | head -n 1)
           echo "Latest cmus version found: $VERSION"
           echo "version=${VERSION}" >> $GITHUB_OUTPUT

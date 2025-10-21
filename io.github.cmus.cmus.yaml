@@ -80,7 +80,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/cmus/cmus.git
-        tag: cmus 2.11.0 «2k24»
+        tag: 2.11.0
         commit: 5f4e941ba59cb90363194ba024e5fb49c97e461d
         x-checker-data:
           type: git
