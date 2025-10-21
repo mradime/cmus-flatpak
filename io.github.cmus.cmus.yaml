@@ -30,15 +30,16 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/tenacityteam/libmad.git
-        tag: 0.16.3
-        commit: 6abb0bc4478e60784df235a76c7b32127b9c2839
+        tag: 0.16.4
+        commit: ee7c3cdd4361b7f7c7da52fa3ba9f76cc35230a9
         x-checker-data:
           type: git
           tag-pattern: ^v?(\d+\.\d+\.\d+)$
       # FIX: Update the minimum required CMake version to a modern one.
       - type: shell
         commands:
-          - sed -i 's/^cmake_minimum_required.*/cmake_minimum_required(VERSION 3.5)/' CMakeLists.txt
+          - sed -i 's/^cmake_minimum_required.*/cmake_minimum_required(VERSION 3.5)/'
+            CMakeLists.txt
 
   - name: cmus
     buildsystem: autotools
@@ -80,8 +81,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/cmus/cmus.git
-        tag: 2.11.0
-        commit: 5f4e941ba59cb90363194ba024e5fb49c97e461d
+        tag: v2.12.0
+        commit: 58d34cf9db5c29e01a985a48a9b6947855cb6cc9
         x-checker-data:
           type: git
           tag-pattern: ^v?(\d+\.\d+\.\d+)$
