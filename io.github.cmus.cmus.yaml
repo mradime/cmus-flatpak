@@ -84,5 +84,5 @@ modules:
         commit: 5f4e941ba59cb90363194ba024e5fb49c97e461d
         x-checker-data:
           type: git
-          tag-pattern: ^cmus (\d+\.\d+\.\d+).*$
+          tag-pattern: ^v?(\d+\.\d+\.\d+)$
           is-main-source: true
