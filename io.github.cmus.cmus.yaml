@@ -41,7 +41,7 @@ modules:
           - sed -i 's/^cmake_minimum_required.*/cmake_minimum_required(VERSION 3.5)/' CMakeLists.txt
 
   - name: cmus
-    buildsystem: make
+    buildsystem: autotools
     config-opts:
       - CONFIG_MPRIS=n
       - CONFIG_CYGWIN=n
