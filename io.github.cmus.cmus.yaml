@@ -35,6 +35,10 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v?(\d+\.\d+\.\d+)$
+      # FIX: Update the minimum required CMake version to a modern one.
+      - type: shell
+        commands:
+          - sed -i 's/^cmake_minimum_required.*/cmake_minimum_required(VERSION 3.5)/' CMakeLists.txt
 
   - name: cmus
     buildsystem: make
