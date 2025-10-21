@@ -170,7 +170,7 @@ jobs:
           if [ -z "$(git -C main status --porcelain)" ]; then
             echo "✅ No changes to commit."
           else
-            git -C main add io.github.cmus.cmus io.github.cmus.cmus.metainfo.xml
+            git -C main add io.github.cmus.cmus.yaml io.github.cmus.cmus.metainfo.xml
             git -C main commit -m "Update cmus to version ${VERSION}"
             git -C main push
           fi
